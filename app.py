@@ -10,12 +10,9 @@ st.set_page_config(
     layout="centered"
 )
 
-# Custom CSS Styling untuk UI yang profesional & estetis
+# Custom CSS Styling untuk tombol dan badge
 st.markdown("""
     <style>
-    .main {
-        background-color: #f8fafc;
-    }
     .stButton>button {
         background-color: #dc2626;
         color: white;
@@ -24,18 +21,9 @@ st.markdown("""
         font-weight: 600;
         border: none;
         box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.2);
-        transition: all 0.3s ease;
     }
     .stButton>button:hover {
         background-color: #b91c1c;
-        box-shadow: 0 6px 8px -1px rgba(185, 28, 28, 0.3);
-    }
-    .card {
-        background-color: white;
-        padding: 2rem;
-        border-radius: 16px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     }
     .badge {
         background-color: #fee2e2;
@@ -101,10 +89,8 @@ st.markdown("<h1 style='color: #1e293b; margin-top: 0.5rem;'>Pelestari Bahasa Nu
 st.markdown("<p style='color: #64748b; font-size: 1.05rem;'>Merawat Kebhinekaan Indonesia Melalui Teknologi AI & Korpus Lokal</p>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
-# Container Utama (Card Layout)
-with st.container():
-    st.markdown("<div class='card'>", unsafe_allow_html=True)
-    
+# Container Utama dengan border rapi bawaan Streamlit
+with st.container(border=True):
     default_text = st.session_state.get("preset_text", "")
     
     text_input = st.text_area(
@@ -165,8 +151,6 @@ with st.container():
                     st.markdown("### 🎯 Hasil Terjemahan:")
                     st.success(translated_text)
                     st.caption(f"📌 Sumber Rujukan Sistem: **{source}**")
-    
-    st.markdown("</div>", unsafe_allow_html=True)
 
 # Footer
 st.markdown("<br><hr>", unsafe_allow_html=True)
