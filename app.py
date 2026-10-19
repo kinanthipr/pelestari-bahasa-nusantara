@@ -84,9 +84,9 @@ with st.sidebar:
 
 # Header Utama
 st.markdown("<div style='text-align: center; margin-bottom: 2rem;'>", unsafe_allow_html=True)
-st.markdown("<span class='badge'>Pendidikan Patriotisme & Informatika</span>", unsafe_allow_html=True)
+st.markdown("<span class='badge'>🔥 INOVASI TEKNOLOGI UNTUK NEGERI</span>", unsafe_allow_html=True)
 st.markdown("<h1 style='color: #1e293b; margin-top: 0.5rem;'>Pelestari Bahasa Nusantara</h1>", unsafe_allow_html=True)
-st.markdown("<p style='color: #64748b; font-size: 1.05rem;'>Merawat Kebhinekaan Indonesia Melalui Teknologi AI & Korpus Lokal</p>", unsafe_allow_html=True)
+st.markdown("<p style='color: #64748b; font-size: 1.05rem;'>Merawat Kebhinekaan Indonesia Melalui Teknologi AI</p>", unsafe_allow_html=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # Container Utama dengan border rapi bawaan Streamlit
@@ -94,7 +94,7 @@ with st.container(border=True):
     default_text = st.session_state.get("preset_text", "")
     
     text_input = st.text_area(
-        "**Teks (Bahasa Indonesia):**", 
+        "**Tulis Pesanmu (Bahasa Indonesia):**", 
         value=default_text,
         placeholder="Contoh: Mari kita jaga persatuan dan kesatuan bangsa...",
         height=100
